@@ -1,0 +1,9 @@
+{
+  "name": "com.llmtracker.native_host",
+  "description": "LLM Tracker Native Messaging Host",
+  "path": "INSTALL_PATH/host.js",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://EXTENSION_ID/"
+  ]
+}

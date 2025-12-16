@@ -35,6 +35,7 @@ class StateManager {
     this.pendingRequests = new Map();
     this.nativePort = null;
     this.isConnected = false;
+    this.isTracking = true;
     this.reconnectTimeout = null;
   }
 
@@ -47,13 +48,18 @@ class StateManager {
   async loadState() {
     const data = await chrome.storage.local.get([
       'activeConversations',
-      'settings'
+      'settings',
+      'isTracking'
     ]);
-    
+
     if (data.activeConversations) {
       this.activeConversations = new Map(
         Object.entries(data.activeConversations)
       );
+    }
+
+    if (data.isTracking !== undefined) {
+      this.isTracking = data.isTracking;
     }
   }
 
@@ -151,9 +157,21 @@ class StateManager {
       case 'API_CAPTURED':
         return await this.handleApiCapture(message.data);
       case 'GET_STATUS':
-        return { connected: this.isConnected };
+      case 'get_status':
+        return {
+          connected: this.isConnected,
+          tracking: this.isTracking !== false
+        };
       case 'GET_STATS':
         return await this.getStats();
+      case 'toggle_tracking':
+        this.isTracking = message.enabled;
+        await chrome.storage.local.set({ isTracking: this.isTracking });
+        return { success: true, tracking: this.isTracking };
+      case 'open_dashboard':
+        // Send message to native app to open dashboard
+        this.sendToNativeApp({ type: 'OPEN_DASHBOARD' });
+        return { success: true };
       default:
         console.warn('Unknown message type:', message.type);
         return { success: false };

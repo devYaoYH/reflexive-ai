@@ -1,0 +1,17 @@
+{
+  "name": "llm-tracker-native-host",
+  "version": "1.0.0",
+  "description": "Native messaging host bridge between Chrome extension and Electron app",
+  "main": "host.js",
+  "scripts": {
+    "start": "node host.js",
+    "test": "jest",
+    "install-host": "node install.js"
+  },
+  "dependencies": {
+    "ws": "^8.14.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

@@ -1,0 +1,30 @@
+# Installer specific ignores
+
+# Build output
+build/
+dist/
+payload/
+
+# Package artifacts
+*.dmg
+*.pkg
+*.exe
+*.msi
+*.deb
+*.rpm
+*.AppImage
+
+# Archives
+*.zip
+*.tar.gz
+
+# Temporary files
+tmp/
+temp/
+
+# Scripts (keep templates)
+scripts/postinstall
+scripts/preinstall
+
+# OS
+.DS_Store

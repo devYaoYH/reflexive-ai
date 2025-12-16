@@ -1,0 +1,15 @@
+# Native Messaging Host specific ignores
+
+# Logs
+logs/
+*.log
+
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# OS
+.DS_Store

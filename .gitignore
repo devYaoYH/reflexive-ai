@@ -1,0 +1,337 @@
+# LLM Tracker - .gitignore
+
+# ============================================================================
+# Node.js / NPM
+# ============================================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Package locks (optional - uncomment if you want to exclude)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# ============================================================================
+# Electron
+# ============================================================================
+dist/
+dist-electron/
+build/
+out/
+release/
+
+# Electron builder output
+*.dmg
+*.pkg
+*.exe
+*.appx
+*.msi
+*.deb
+*.rpm
+*.AppImage
+*.snap
+
+# macOS specific
+*.app/
+.DS_Store
+
+# ============================================================================
+# Chrome Extension
+# ============================================================================
+chrome-extension/dist/
+chrome-extension/build/
+chrome-extension/*.crx
+chrome-extension/*.pem
+chrome-extension/*.zip
+
+# Extension bundle output
+chrome-extension/bundle.js
+chrome-extension/bundle.js.map
+
+# ============================================================================
+# Database Files
+# ============================================================================
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+
+# Database backups
+*.db.backup
+*.sqlite.backup
+database/backups/
+
+# ============================================================================
+# Logs
+# ============================================================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime logs
+combined.log
+error.log
+debug.log
+
+# ============================================================================
+# Environment Variables
+# ============================================================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# ============================================================================
+# IDE / Editor
+# ============================================================================
+
+# VSCode
+.vscode/
+*.code-workspace
+.history/
+
+# IntelliJ / WebStorm
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ============================================================================
+# Operating System
+# ============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.directory
+.Trash-*
+.nfs*
+
+# ============================================================================
+# Testing
+# ============================================================================
+coverage/
+.nyc_output/
+*.lcov
+.coverage
+htmlcov/
+.pytest_cache/
+.jest/
+test-results/
+screenshots/
+videos/
+
+# ============================================================================
+# Build Artifacts
+# ============================================================================
+*.tsbuildinfo
+.npm
+.eslintcache
+.stylelintcache
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vuepress/dist
+.serverless/
+.fusebox/
+.dynamodb/
+.tern-port
+.vscode-test
+
+# Webpack
+.webpack/
+
+# Rollup
+.rollup.cache/
+
+# Vite
+.vite/
+vite.config.js.timestamp-*
+
+# ============================================================================
+# Temporary Files
+# ============================================================================
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+
+# ============================================================================
+# Archives
+# ============================================================================
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Exclude installer archives (unless you want to version them)
+installer/*.zip
+installer/*.dmg
+installer/*.pkg
+
+# ============================================================================
+# Documentation Build
+# ============================================================================
+docs/_build/
+docs/.doctrees/
+docs/site/
+
+# ============================================================================
+# Dependencies Cache
+# ============================================================================
+.pnp.*
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# ============================================================================
+# Native Messaging Host
+# ============================================================================
+native-host/logs/
+native-host/*.log
+
+# ============================================================================
+# Desktop App Specific
+# ============================================================================
+desktop-app/renderer/dist/
+desktop-app/renderer/build/
+desktop-app/.webpack/
+
+# User data and settings (in development)
+desktop-app/user-data/
+desktop-app/data/
+
+# ============================================================================
+# Installer Build Artifacts
+# ============================================================================
+installer/build/
+installer/dist/
+installer/payload/
+installer/scripts/postinstall
+installer/*.pkg
+installer/*.dmg
+
+# ============================================================================
+# Security & Secrets
+# ============================================================================
+*.key
+*.pem
+*.p12
+*.pfx
+*.cer
+*.crt
+secrets/
+credentials/
+
+# API keys (if accidentally stored)
+*api-key*
+*secret*
+*token*
+
+# ============================================================================
+# Optional: Keep These
+# ============================================================================
+
+# You might want to keep these files:
+# !.gitkeep
+# !.gitignore
+# !README.md
+# !LICENSE
+
+# Keep example/template files
+!*.example
+!*.template
+!*.sample
+
+# Keep icon files
+!icons/
+!chrome-extension/icons/
+!desktop-app/assets/icons/
+
+# ============================================================================
+# Project Specific
+# ============================================================================
+
+# User-specific tracking data (development/testing)
+test-data/
+sample-conversations/
+*.test.db
+
+# Generated documentation
+api-docs/
+docs/generated/
+
+# Performance profiling
+*.cpuprofile
+*.heapprofile
+*.heapsnapshot
+
+# Benchmarks
+benchmarks/results/

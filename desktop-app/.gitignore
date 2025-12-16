@@ -1,0 +1,35 @@
+# Desktop App specific ignores
+
+# Build output
+dist/
+build/
+out/
+release/
+
+# Electron specific
+.webpack/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
+database/*.db
+
+# User data
+user-data/
+data/
+
+# Logs
+logs/
+*.log
+
+# Node modules
+node_modules/
+
+# Environment
+.env.local
+
+# OS
+.DS_Store

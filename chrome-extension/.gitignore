@@ -1,0 +1,22 @@
+# Chrome Extension specific ignores
+
+# Build output
+dist/
+build/
+bundle/
+
+# Packed extensions
+*.crx
+*.pem
+*.zip
+
+# Build artifacts
+bundle.js
+bundle.js.map
+*.js.map
+
+# Generated files
+lib/uuid.js
+
+# Node modules
+node_modules/
